@@ -1,7 +1,7 @@
-# Bull Prom
-[![npm version](https://badge.fury.io/js/bull-prom.svg?style=flat)](http://badge.fury.io/js/bull-prom)
+# Bee-Queue Prom
+[![npm version](https://badge.fury.io/js/bee-queue-prom.svg?style=flat)](http://badge.fury.io/js/bee-queue-prom)
 
-Provides [Prometheus](https://prometheus.io/) metrics for [Bull](https://github.com/OptimalBits/bull)
+Provides [Prometheus](https://prometheus.io/) metrics for [Bee-Queue](https://github.com/OptimalBits/bee-queue)
 
 Metrics:
 - waiting jobs (gauge)
@@ -12,19 +12,19 @@ Metrics:
 
 ## Usage
 ```typescript
-import Queue from 'bull';
+import Queue from 'bee-queue';
 import promClient from 'prom-client';
-import * as bullProm from 'bull-prom';
+import * as bee-queueProm from 'bee-queue-prom';
 
 const queue = new Queue('myQueue'...);
 
-const bullMetric = bullProm.init({
+const bee-queueMetric = bee-queueProm.init({
   queue,
   promClient, // optional, it will use internal prom client if it is not given
   interval: 1000, // optional, in ms, default to 60000
 });
 
-bullMetric.run();
+bee-queueMetric.run();
 
 // Metrics result in Promotheus
 // jobs_waiting_total{queue_name="myQueue"} 0
@@ -39,12 +39,12 @@ bullMetric.run();
 Initialize
 
 options:
-- queue (**required**): bull queue
+- queue (**required**): Bee-Queue queue
 - promClient (*optional*): prom client instance
-- interval (*optional*, default 60000): interval in ms to fetch the Bull statistic
+- interval (*optional*, default 5000): interval in ms to fetch the Bee-Queue statistic
 
 ### run()
-Start running and fetching the data from Bull based on interval
+Start running and fetching the data from Bee-Queue based on interval
 
 ### stop()
 Stop running

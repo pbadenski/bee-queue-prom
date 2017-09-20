@@ -1,13 +1,13 @@
 {
-  "name": "bull-prom",
-  "version": "1.0.1",
-  "description": "Provide prometheus metrics for Bull",
+  "name": "bee-queue-prom",
+  "version": "1.0.0",
+  "description": "Provide prometheus metrics for Bee-Queue",
   "license": "MIT",
-  "repository": "https://github.com/pbadenski/bull-prom",
+  "repository": "https://github.com/pbadenski/bee-queue-prom",
   "author": "Pawel Badenski <pawel.badenski@gmail.com>",
   "keywords": [
     "prometheus",
-    "bull",
+    "bee-queue",
     "metrics"
   ],
   "files": [
@@ -25,11 +25,10 @@
     "watch:test": "npm run test -- --watch"
   },
   "dependencies": {
-    "bull": "^3.2.0",
-    "prom-client": "^9.0.0"
+    "prom-client": "^9.0.0",
+    "bee-queue": "^1.1.0"
   },
   "devDependencies": {
-    "@types/bull": "^3.0.0",
     "@types/chai": "^3.0.0",
     "@types/mocha": "^2.0.0",
     "@types/node": "^7.0.0",

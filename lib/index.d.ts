@@ -1,7 +1,5 @@
-/// <reference types="bull" />
-import * as bull from 'bull';
 export interface Options {
-    queue: bull.Queue;
+    queue: any;
     promClient?: any;
     labels?: string[];
     interval?: number;
