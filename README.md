@@ -1,7 +1,7 @@
 # Bee-Queue Prom
 [![npm version](https://badge.fury.io/js/bee-queue-prom.svg?style=flat)](http://badge.fury.io/js/bee-queue-prom)
 
-Provides [Prometheus](https://prometheus.io/) metrics for [Bee-Queue](https://github.com/OptimalBits/bee-queue)
+Provides [Prometheus](https://prometheus.io/) metrics for [Bee-Queue](https://github.com/bee-queue/bee-queue)
 
 Metrics:
 - waiting jobs (gauge)
